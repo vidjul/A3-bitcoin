@@ -102,22 +102,22 @@
         var index = document.getElementById("inputIndex").value;
         if (address != "") {
 
-            requeteAPI("http://bitcoin.mubiz.com/address/" + address + "/", "champAddress");
+            requeteAPI("https://bitcoin.mubiz.com/address/" + address + "/", "champAddress");
         }
 
         if (hashTransac != "") {
 
-            requeteAPI("http://bitcoin.mubiz.com/transaction/" + hashTransac + "/", "champHashTransac");
+            requeteAPI("https://bitcoin.mubiz.com/transaction/" + hashTransac + "/", "champHashTransac");
         }
 
         if (hashBlock != "") {
 
-            requeteAPI("http://bitcoin.mubiz.com/block_hash/" + hashBlock + "/", "champHashBlock");
+            requeteAPI("https://bitcoin.mubiz.com/block_hash/" + hashBlock + "/", "champHashBlock");
         }
 
         if (index != "") {
 
-            requeteAPI("http://bitcoin.mubiz.com/block_index/" + index + "/", "champIndex");
+            requeteAPI("https://bitcoin.mubiz.com/block_index/" + index + "/", "champIndex");
         }
     }
 </script>
