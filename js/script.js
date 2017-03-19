@@ -12,8 +12,8 @@ function requeteAPI(url, id) {
 }
 
 function homePageLoading() {
-    requeteAPI("http://bitcoin.mubiz.com/info", "info");
-    requeteAPI("http://bitcoin.mubiz.com/blockchaininfo", "blockchaininfo");
-    requeteAPI("http://bitcoin.mubiz.com/mininginfo", "mininginfo");
-    requeteAPI("http://bitcoin.mubiz.com/peerinfo", "peerinfo");
+    requeteAPI("https://bitcoin.mubiz.com/info", "info");
+    requeteAPI("https://bitcoin.mubiz.com/blockchaininfo", "blockchaininfo");
+    requeteAPI("https://bitcoin.mubiz.com/mininginfo", "mininginfo");
+    requeteAPI("https://bitcoin.mubiz.com/peerinfo", "peerinfo");
 }
