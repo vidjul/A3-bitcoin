@@ -101,23 +101,34 @@
         var hashBlock = document.getElementById("inputHashBlock").value;
         var index = document.getElementById("inputIndex").value;
         if (address != "") {
-
-            requeteAPI("https://bitcoin.mubiz.com/address/" + address + "/", "champAddress");
+            if ((/^[0-9a-zA-Z]{34}$/.test(address))) {
+                requeteAPI("https://bitcoin.mubiz.com/address/" + address + "/", "champAddress");
+            } else {
+                document.getElementById("champAddress").innerHTML = "Erreur";
+            }
         }
-
         if (hashTransac != "") {
-
-            requeteAPI("https://bitcoin.mubiz.com/transaction/" + hashTransac + "/", "champHashTransac");
+            if ((/^[0-9a-zA-Z]{64}$/.test(hashTransac))) {
+                requeteAPI("https://bitcoin.mubiz.com/transaction/" + hashTransac + "/", "champHashTransac");
+            } else {
+                document.getElementById("champHashTransac").innerHTML = "Erreur";
+            }
         }
 
         if (hashBlock != "") {
-
-            requeteAPI("https://bitcoin.mubiz.com/block_hash/" + hashBlock + "/", "champHashBlock");
+            if ((/^[0-9a-zA-Z]{64}$/.test(hashBlock))) {
+                requeteAPI("https://bitcoin.mubiz.com/block_hash/" + hashBlock + "/", "champHashBlock");
+            } else {
+                document.getElementById("champHashBlock").innerHTML = "Erreur";
+            }
         }
 
         if (index != "") {
-
-            requeteAPI("https://bitcoin.mubiz.com/block_index/" + index + "/", "champIndex");
+            if (/^[0-9]{5,}$/.test(index)) {
+                requeteAPI("https://bitcoin.mubiz.com/block_index/" + index + "/", "champIndex");
+            } else {
+                document.getElementById("champIndex").innerHTML = "Erreur";
+            }
         }
     }
 </script>
